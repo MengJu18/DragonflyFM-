@@ -1,0 +1,483 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BAB84880237913F0009CFBC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB8487F237913F0009CFBC3 /* AppDelegate.swift */; };
+		BAB84882237913F0009CFBC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB84881237913F0009CFBC3 /* ViewController.swift */; };
+		BAB84885237913F0009CFBC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB84883237913F0009CFBC3 /* Main.storyboard */; };
+		BAB84888237913F0009CFBC3 /* DragonflyFM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAB84886237913F0009CFBC3 /* DragonflyFM.xcdatamodeld */; };
+		BAB8488A237913F0009CFBC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB84889237913F0009CFBC3 /* Assets.xcassets */; };
+		BAB8488D237913F0009CFBC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB8488B237913F0009CFBC3 /* LaunchScreen.storyboard */; };
+		BAB84898237913F0009CFBC3 /* DragonflyFMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB84897237913F0009CFBC3 /* DragonflyFMTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BAB84894237913F0009CFBC3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BAB84874237913F0009CFBC3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BAB8487B237913F0009CFBC3;
+			remoteInfo = DragonflyFM;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BAB8487C237913F0009CFBC3 /* DragonflyFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonflyFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAB8487F237913F0009CFBC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BAB84881237913F0009CFBC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BAB84884237913F0009CFBC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BAB84887237913F0009CFBC3 /* DragonflyFM.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = DragonflyFM.xcdatamodel; sourceTree = "<group>"; };
+		BAB84889237913F0009CFBC3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BAB8488C237913F0009CFBC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BAB8488E237913F0009CFBC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAB84893237913F0009CFBC3 /* DragonflyFMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragonflyFMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BAB84897237913F0009CFBC3 /* DragonflyFMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonflyFMTests.swift; sourceTree = "<group>"; };
+		BAB84899237913F0009CFBC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BAB84879237913F0009CFBC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAB84890237913F0009CFBC3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BAB84873237913F0009CFBC3 = {
+			isa = PBXGroup;
+			children = (
+				BAB8487E237913F0009CFBC3 /* DragonflyFM */,
+				BAB84896237913F0009CFBC3 /* DragonflyFMTests */,
+				BAB8487D237913F0009CFBC3 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BAB8487D237913F0009CFBC3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BAB8487C237913F0009CFBC3 /* DragonflyFM.app */,
+				BAB84893237913F0009CFBC3 /* DragonflyFMTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BAB8487E237913F0009CFBC3 /* DragonflyFM */ = {
+			isa = PBXGroup;
+			children = (
+				BAB8487F237913F0009CFBC3 /* AppDelegate.swift */,
+				BAB84881237913F0009CFBC3 /* ViewController.swift */,
+				BAB84883237913F0009CFBC3 /* Main.storyboard */,
+				BAB84889237913F0009CFBC3 /* Assets.xcassets */,
+				BAB8488B237913F0009CFBC3 /* LaunchScreen.storyboard */,
+				BAB8488E237913F0009CFBC3 /* Info.plist */,
+				BAB84886237913F0009CFBC3 /* DragonflyFM.xcdatamodeld */,
+			);
+			path = DragonflyFM;
+			sourceTree = "<group>";
+		};
+		BAB84896237913F0009CFBC3 /* DragonflyFMTests */ = {
+			isa = PBXGroup;
+			children = (
+				BAB84897237913F0009CFBC3 /* DragonflyFMTests.swift */,
+				BAB84899237913F0009CFBC3 /* Info.plist */,
+			);
+			path = DragonflyFMTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BAB8487B237913F0009CFBC3 /* DragonflyFM */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAB8489C237913F0009CFBC3 /* Build configuration list for PBXNativeTarget "DragonflyFM" */;
+			buildPhases = (
+				BAB84878237913F0009CFBC3 /* Sources */,
+				BAB84879237913F0009CFBC3 /* Frameworks */,
+				BAB8487A237913F0009CFBC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DragonflyFM;
+			productName = DragonflyFM;
+			productReference = BAB8487C237913F0009CFBC3 /* DragonflyFM.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BAB84892237913F0009CFBC3 /* DragonflyFMTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BAB8489F237913F0009CFBC3 /* Build configuration list for PBXNativeTarget "DragonflyFMTests" */;
+			buildPhases = (
+				BAB8488F237913F0009CFBC3 /* Sources */,
+				BAB84890237913F0009CFBC3 /* Frameworks */,
+				BAB84891237913F0009CFBC3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BAB84895237913F0009CFBC3 /* PBXTargetDependency */,
+			);
+			name = DragonflyFMTests;
+			productName = DragonflyFMTests;
+			productReference = BAB84893237913F0009CFBC3 /* DragonflyFMTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BAB84874237913F0009CFBC3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = 2017yd;
+				TargetAttributes = {
+					BAB8487B237913F0009CFBC3 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					BAB84892237913F0009CFBC3 = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = BAB8487B237913F0009CFBC3;
+					};
+				};
+			};
+			buildConfigurationList = BAB84877237913F0009CFBC3 /* Build configuration list for PBXProject "DragonflyFM" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BAB84873237913F0009CFBC3;
+			productRefGroup = BAB8487D237913F0009CFBC3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BAB8487B237913F0009CFBC3 /* DragonflyFM */,
+				BAB84892237913F0009CFBC3 /* DragonflyFMTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BAB8487A237913F0009CFBC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAB8488D237913F0009CFBC3 /* LaunchScreen.storyboard in Resources */,
+				BAB8488A237913F0009CFBC3 /* Assets.xcassets in Resources */,
+				BAB84885237913F0009CFBC3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAB84891237913F0009CFBC3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BAB84878237913F0009CFBC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAB84888237913F0009CFBC3 /* DragonflyFM.xcdatamodeld in Sources */,
+				BAB84882237913F0009CFBC3 /* ViewController.swift in Sources */,
+				BAB84880237913F0009CFBC3 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BAB8488F237913F0009CFBC3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BAB84898237913F0009CFBC3 /* DragonflyFMTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BAB84895237913F0009CFBC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BAB8487B237913F0009CFBC3 /* DragonflyFM */;
+			targetProxy = BAB84894237913F0009CFBC3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BAB84883237913F0009CFBC3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAB84884237913F0009CFBC3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BAB8488B237913F0009CFBC3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BAB8488C237913F0009CFBC3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BAB8489A237913F0009CFBC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BAB8489B237913F0009CFBC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BAB8489D237913F0009CFBC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DragonflyFM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.lzzy.DragonflyFM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BAB8489E237913F0009CFBC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DragonflyFM/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.lzzy.DragonflyFM;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		BAB848A0237913F0009CFBC3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DragonflyFMTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.lzzy.DragonflyFMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DragonflyFM.app/DragonflyFM";
+			};
+			name = Debug;
+		};
+		BAB848A1237913F0009CFBC3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = DragonflyFMTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = net.lzzy.DragonflyFMTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DragonflyFM.app/DragonflyFM";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BAB84877237913F0009CFBC3 /* Build configuration list for PBXProject "DragonflyFM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAB8489A237913F0009CFBC3 /* Debug */,
+				BAB8489B237913F0009CFBC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAB8489C237913F0009CFBC3 /* Build configuration list for PBXNativeTarget "DragonflyFM" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAB8489D237913F0009CFBC3 /* Debug */,
+				BAB8489E237913F0009CFBC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BAB8489F237913F0009CFBC3 /* Build configuration list for PBXNativeTarget "DragonflyFMTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BAB848A0237913F0009CFBC3 /* Debug */,
+				BAB848A1237913F0009CFBC3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BAB84886237913F0009CFBC3 /* DragonflyFM.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BAB84887237913F0009CFBC3 /* DragonflyFM.xcdatamodel */,
+			);
+			currentVersion = BAB84887237913F0009CFBC3 /* DragonflyFM.xcdatamodel */;
+			path = DragonflyFM.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = BAB84874237913F0009CFBC3 /* Project object */;
+}
