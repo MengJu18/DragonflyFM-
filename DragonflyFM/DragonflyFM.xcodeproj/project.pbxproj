@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3C4271F2A03C9CAC317BF1BB /* Pods_DragonflyFMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38067F62176893F18B264AE /* Pods_DragonflyFMTests.framework */; };
+		4ED78D17AF93239F9FA22059 /* Pods_DragonflyFM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3905C43410E6AD23A0EA656 /* Pods_DragonflyFM.framework */; };
 		BAB84880237913F0009CFBC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB8487F237913F0009CFBC3 /* AppDelegate.swift */; };
 		BAB84882237913F0009CFBC3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB84881237913F0009CFBC3 /* ViewController.swift */; };
 		BAB84885237913F0009CFBC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB84883237913F0009CFBC3 /* Main.storyboard */; };
@@ -14,6 +16,8 @@
 		BAB8488A237913F0009CFBC3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAB84889237913F0009CFBC3 /* Assets.xcassets */; };
 		BAB8488D237913F0009CFBC3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB8488B237913F0009CFBC3 /* LaunchScreen.storyboard */; };
 		BAB84898237913F0009CFBC3 /* DragonflyFMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB84897237913F0009CFBC3 /* DragonflyFMTests.swift */; };
+		BAB848AA23791667009CFBC3 /* JSONConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB848A823791667009CFBC3 /* JSONConverter.swift */; };
+		BAB848AB23791667009CFBC3 /* JSONable.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB848A923791667009CFBC3 /* JSONable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		22EADB6334AC8A9B6296961C /* Pods-DragonflyFM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonflyFM.release.xcconfig"; path = "Target Support Files/Pods-DragonflyFM/Pods-DragonflyFM.release.xcconfig"; sourceTree = "<group>"; };
+		3C5F6C4F548057EEB5AE4AC6 /* Pods-DragonflyFM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonflyFM.debug.xcconfig"; path = "Target Support Files/Pods-DragonflyFM/Pods-DragonflyFM.debug.xcconfig"; sourceTree = "<group>"; };
+		9CADBA76C6CF0D35D55A169C /* Pods-DragonflyFMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonflyFMTests.debug.xcconfig"; path = "Target Support Files/Pods-DragonflyFMTests/Pods-DragonflyFMTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B365B24153926C657C8432FD /* Pods-DragonflyFMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonflyFMTests.release.xcconfig"; path = "Target Support Files/Pods-DragonflyFMTests/Pods-DragonflyFMTests.release.xcconfig"; sourceTree = "<group>"; };
+		B38067F62176893F18B264AE /* Pods_DragonflyFMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DragonflyFMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB8487C237913F0009CFBC3 /* DragonflyFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonflyFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB8487F237913F0009CFBC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAB84881237913F0009CFBC3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -38,6 +47,9 @@
 		BAB84893237913F0009CFBC3 /* DragonflyFMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DragonflyFMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB84897237913F0009CFBC3 /* DragonflyFMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DragonflyFMTests.swift; sourceTree = "<group>"; };
 		BAB84899237913F0009CFBC3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BAB848A823791667009CFBC3 /* JSONConverter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONConverter.swift; sourceTree = "<group>"; };
+		BAB848A923791667009CFBC3 /* JSONable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONable.swift; sourceTree = "<group>"; };
+		C3905C43410E6AD23A0EA656 /* Pods_DragonflyFM.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DragonflyFM.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +57,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4ED78D17AF93239F9FA22059 /* Pods_DragonflyFM.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,18 +65,32 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C4271F2A03C9CAC317BF1BB /* Pods_DragonflyFMTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		664D1D37A61976EEC9EAC7DA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C5F6C4F548057EEB5AE4AC6 /* Pods-DragonflyFM.debug.xcconfig */,
+				22EADB6334AC8A9B6296961C /* Pods-DragonflyFM.release.xcconfig */,
+				9CADBA76C6CF0D35D55A169C /* Pods-DragonflyFMTests.debug.xcconfig */,
+				B365B24153926C657C8432FD /* Pods-DragonflyFMTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		BAB84873237913F0009CFBC3 = {
 			isa = PBXGroup;
 			children = (
 				BAB8487E237913F0009CFBC3 /* DragonflyFM */,
 				BAB84896237913F0009CFBC3 /* DragonflyFMTests */,
 				BAB8487D237913F0009CFBC3 /* Products */,
+				664D1D37A61976EEC9EAC7DA /* Pods */,
+				E336BFD5100A01C1D0B9D1A5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +106,12 @@
 		BAB8487E237913F0009CFBC3 /* DragonflyFM */ = {
 			isa = PBXGroup;
 			children = (
+				BAB848A72379164D009CFBC3 /* Controllers */,
+				BAB848A623791644009CFBC3 /* Netwotk */,
+				BAB848A52379163B009CFBC3 /* Perslsts */,
+				BAB848A423791632009CFBC3 /* Models */,
+				BAB848A323791626009CFBC3 /* Utils */,
+				BAB848A223791608009CFBC3 /* View */,
 				BAB8487F237913F0009CFBC3 /* AppDelegate.swift */,
 				BAB84881237913F0009CFBC3 /* ViewController.swift */,
 				BAB84883237913F0009CFBC3 /* Main.storyboard */,
@@ -99,6 +132,59 @@
 			path = DragonflyFMTests;
 			sourceTree = "<group>";
 		};
+		BAB848A223791608009CFBC3 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		BAB848A323791626009CFBC3 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		BAB848A423791632009CFBC3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BAB848A52379163B009CFBC3 /* Perslsts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Perslsts;
+			sourceTree = "<group>";
+		};
+		BAB848A623791644009CFBC3 /* Netwotk */ = {
+			isa = PBXGroup;
+			children = (
+				BAB848A923791667009CFBC3 /* JSONable.swift */,
+				BAB848A823791667009CFBC3 /* JSONConverter.swift */,
+			);
+			path = Netwotk;
+			sourceTree = "<group>";
+		};
+		BAB848A72379164D009CFBC3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		E336BFD5100A01C1D0B9D1A5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C3905C43410E6AD23A0EA656 /* Pods_DragonflyFM.framework */,
+				B38067F62176893F18B264AE /* Pods_DragonflyFMTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -106,9 +192,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAB8489C237913F0009CFBC3 /* Build configuration list for PBXNativeTarget "DragonflyFM" */;
 			buildPhases = (
+				591FE25EFA0D98C967D74975 /* [CP] Check Pods Manifest.lock */,
 				BAB84878237913F0009CFBC3 /* Sources */,
 				BAB84879237913F0009CFBC3 /* Frameworks */,
 				BAB8487A237913F0009CFBC3 /* Resources */,
+				ABD517D9CBD4C30468F322C1 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -123,6 +211,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BAB8489F237913F0009CFBC3 /* Build configuration list for PBXNativeTarget "DragonflyFMTests" */;
 			buildPhases = (
+				D43F0A7A630B151B50ADD6F6 /* [CP] Check Pods Manifest.lock */,
 				BAB8488F237913F0009CFBC3 /* Sources */,
 				BAB84890237913F0009CFBC3 /* Frameworks */,
 				BAB84891237913F0009CFBC3 /* Resources */,
@@ -195,11 +284,77 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		591FE25EFA0D98C967D74975 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DragonflyFM-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ABD517D9CBD4C30468F322C1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DragonflyFM/Pods-DragonflyFM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DragonflyFM/Pods-DragonflyFM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DragonflyFM/Pods-DragonflyFM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D43F0A7A630B151B50ADD6F6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DragonflyFMTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		BAB84878237913F0009CFBC3 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAB848AB23791667009CFBC3 /* JSONable.swift in Sources */,
+				BAB848AA23791667009CFBC3 /* JSONConverter.swift in Sources */,
 				BAB84888237913F0009CFBC3 /* DragonflyFM.xcdatamodeld in Sources */,
 				BAB84882237913F0009CFBC3 /* ViewController.swift in Sources */,
 				BAB84880237913F0009CFBC3 /* AppDelegate.swift in Sources */,
@@ -362,6 +517,7 @@
 		};
 		BAB8489D237913F0009CFBC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3C5F6C4F548057EEB5AE4AC6 /* Pods-DragonflyFM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -379,6 +535,7 @@
 		};
 		BAB8489E237913F0009CFBC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 22EADB6334AC8A9B6296961C /* Pods-DragonflyFM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -396,6 +553,7 @@
 		};
 		BAB848A0237913F0009CFBC3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CADBA76C6CF0D35D55A169C /* Pods-DragonflyFMTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -416,6 +574,7 @@
 		};
 		BAB848A1237913F0009CFBC3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B365B24153926C657C8432FD /* Pods-DragonflyFMTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
