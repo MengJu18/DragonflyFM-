@@ -14,6 +14,7 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updateTime" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
+    <entity name="FamousQuotes" representedClassName="FamousQuotes" syncable="YES" codeGenerationType="class"/>
     <entity name="Playbills" representedClassName="Playbills" syncable="YES" codeGenerationType="class">
         <attribute name="duration" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="endTime" optional="YES" attributeType="String" syncable="YES"/>
@@ -28,10 +29,11 @@
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Region" positionX="-63" positionY="-18" width="128" height="60"/>
         <element name="Categories" positionX="-54" positionY="0" width="128" height="75"/>
-        <element name="Regions" positionX="-36" positionY="27" width="128" height="75"/>
         <element name="Channels" positionX="-18" positionY="45" width="128" height="165"/>
         <element name="Playbills" positionX="0" positionY="108" width="128" height="105"/>
+        <element name="Region" positionX="-63" positionY="-18" width="128" height="60"/>
+        <element name="Regions" positionX="-36" positionY="27" width="128" height="75"/>
+        <element name="FamousQuotes" positionX="-27" positionY="72" width="128" height="45"/>
     </elements>
 </model>
