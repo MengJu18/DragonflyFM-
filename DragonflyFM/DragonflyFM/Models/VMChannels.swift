@@ -14,10 +14,9 @@ class VMChannels:JSONable {
             let categorie = json[json_channels_categories] as! NSArray
             for a in categorie {
                 let c = a as! Dictionary<String,Any>
-                categories = (c[json_channels_categories]) as? String
+                categories = (c["title"]) as? String
             }
         }
-//        categories = json[json_channels_categories] as? String
         contentId = json[json_channels_contentId] as? Int32
         cover = json[json_channels_cover] as? String
         descriptions = json[json_channels_descriptions] as? String
@@ -25,7 +24,7 @@ class VMChannels:JSONable {
         updateTime = json[json_channels_updateTime] as? String
         if json[json_channels_nowplaying] is NSObject {
             let now = json[json_channels_nowplaying] as! Dictionary<String,Any>
-            nowplaying = now["json_channels_nowplaying"] as? String
+            nowplaying = now["title"] as? String
            
         }
         

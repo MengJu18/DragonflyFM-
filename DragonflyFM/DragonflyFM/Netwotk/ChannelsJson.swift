@@ -11,13 +11,15 @@ let json_channels_audienceCount = "audience_count"
 let json_channels_categories = "categories"
 let json_channels_contentId = "content_id"
 let json_channels_cover = "cover"
-let json_channels_descriptions = "descriptions"
+let json_channels_descriptions = "description"
 let json_channels_nowplaying = "nowplaying"
 let json_channels_title = "title"
 let json_channels_updateTime = "update_time"
+let json_channels_items = "items"
+
 class ChannelsJson {
     static func getSearchUrl(id:Int32,page:Int) -> String{
-        let url = "https://rapi.qingting.fm/categories/\(id)/channels?with_total=true&page=\(page)&pagesize=12"
+        let url = "https://rapi.qingting.fm/categories/\(id)/channels?with_total=true&page=\(page)&pagesize=21"
         return url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     }
 }

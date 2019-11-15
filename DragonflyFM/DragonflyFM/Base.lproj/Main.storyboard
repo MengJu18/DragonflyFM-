@@ -1,14 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="HD0-35-QYV">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LYH-Lm-lgt">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Channels Controller-->
+        <!--电台-->
+        <scene sceneID="UQ1-rv-bv8">
+            <objects>
+                <collectionViewController id="h2E-ka-yVv" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="9lc-aI-hnt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Ukb-uj-Z7N">
+                            <size key="itemSize" width="50" height="50"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="ywZ-Kq-FbZ">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                    <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </view>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="h2E-ka-yVv" id="vhK-aq-FKF"/>
+                            <outlet property="delegate" destination="h2E-ka-yVv" id="Ur5-7Y-Z9J"/>
+                        </connections>
+                    </collectionView>
+                    <tabBarItem key="tabBarItem" title="电台" id="xB4-I8-exr"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JYF-ZW-JrA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1739" y="-560"/>
+        </scene>
+        <!--搜索-->
         <scene sceneID="p3r-Ov-oMh">
             <objects>
                 <collectionViewController id="HD0-35-QYV" customClass="ChannelsController" customModule="DragonflyFM" customModuleProvider="target" sceneMemberID="viewController">
@@ -100,10 +136,93 @@
                             <outlet property="delegate" destination="HD0-35-QYV" id="0YU-EH-xGV"/>
                         </connections>
                     </collectionView>
+                    <tabBarItem key="tabBarItem" title="搜索" id="0zE-6l-u2e"/>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tlQ-3s-8IV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="976.81159420289862" y="123.88392857142857"/>
+            <point key="canvasLocation" x="1738" y="124"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dnv-Zw-hDJ">
+            <objects>
+                <viewController id="LYH-Lm-lgt" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r4g-ao-fum">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0cF-Uj-fvl">
+                                <rect key="frame" x="356" y="44" width="31" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="跳过"/>
+                                <connections>
+                                    <segue destination="Zlf-9o-JPD" kind="show" id="vso-fa-uRu"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="xGG-PN-nYM"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SvD-Pk-Vk7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="210" y="124"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="At7-Py-uSn">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="Zlf-9o-JPD" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Oc0-Tf-MBS">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="HD0-35-QYV" kind="relationship" relationship="viewControllers" id="MNe-IM-ACz"/>
+                        <segue destination="h2E-ka-yVv" kind="relationship" relationship="viewControllers" id="UXf-dJ-3Gf"/>
+                        <segue destination="9Nf-cC-VgX" kind="relationship" relationship="viewControllers" id="l1I-eS-uQ4"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xwm-Zg-GFh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="977" y="124"/>
+        </scene>
+        <!--分析-->
+        <scene sceneID="OdI-5D-cyP">
+            <objects>
+                <viewController id="9Nf-cC-VgX" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hxu-6k-49f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HK9-1i-mlT">
+                                <rect key="frame" x="0.0" y="44" width="414" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wLH-La-Sb4">
+                                <rect key="frame" x="0.0" y="74" width="414" height="739"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                                <connections>
+                                    <segue destination="9BG-3p-HVJ" kind="embed" id="tXI-vX-K65"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="e6H-Vn-uQI"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="分析" id="BX4-5B-IMA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="53P-gf-1KL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="976.81159420289862" y="862.5"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="LSJ-u5-hCM">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="9BG-3p-HVJ" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ugw-u7-GMs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1716" y="863"/>
         </scene>
     </scenes>
     <resources>

@@ -7,6 +7,7 @@
 //
 
 import Foundation
+let json_tag_Data = "Data"
 let json_Data_id = "id"
 let json_Data_title = "title"
 class RegionsJson {

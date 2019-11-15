@@ -7,19 +7,24 @@
 //
 
 import UIKit
-
+import Alamofire
+import AlamofireImage
 private let reuseIdentifier = "Cell"
 
-class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyViewDelegate{
-    var chennels :[VMChannels]?
-    
+class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyViewDelegate,UITableViewDelegate,UITableViewDataSource{
    
     
+    var chennels :[VMChannels]?
+    var regions:[VMRegions]?
+    var currentPage = 1
+    var isLoading = false
+    var region = "广西"
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        loadChennels(kw: 239)
+        loadRegions()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -43,6 +48,7 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
         let hader = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "serachHeader", for: indexPath) as! HeaderReusableView
         hader.seaechBar.delegate = self
         hader.btnRegions.addTarget(self, action: #selector(btnRegios(_:)), for: .touchUpInside)
+        hader.btnRegions.setTitle(region, for: .normal)
         return hader
     }
     
@@ -51,7 +57,35 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
     }
     
     @objc func btnRegios(_ btn: UIButton) {
-        UIAlertController.showAlert("456", in: self)
+         picker = ActionTablePicker(title: "选择地区", count: regions!.count, dataSource: self , delegate: self).show(superView: self.view)
+    }
+    
+    private var picker:ActionTablePicker?
+    func itemSelectde(index: Int) {
+       let regio = regions![index]
+        region = regio.title!
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return regions?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = UITableViewCell(style: .default, reuseIdentifier: "cell")
+        let region = regions![indexPath.row]
+        cell.textLabel?.text = region.title
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        itemSelectde(index: indexPath.row)
+        if picker != nil {
+            picker?.cancel()
+        }
     }
 
     // MARK: UICollectionViewDataSource
@@ -69,12 +103,81 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ChannelsCell
-    
-        // Configure the cell
-    
+        let chennel = chennels![indexPath.item]
+        cell.lblName.text = chennel.title
+        cell.lblCount.text = "\(chennel.audienceCount)"
+        Alamofire.request(chennel.cover!).responseImage{ response in
+            if let imag = response.result.value {
+                cell.imgCover.image = imag
+            }
+        }
         return cell
     }
 
+    
+    func loadChennels(kw:Int32) {
+        Alamofire.request(ChannelsJson.getSearchUrl(id: kw, page: currentPage))
+            .validate(statusCode: 200..<300)
+            .validate(contentType:  ["application/json"])
+            .responseJSON { response in
+                switch response.result {
+                case .success:
+                    if let json = response.result.value {
+                        let chenn = ChennelsConverter.getChennels(json: json)
+                        if chenn == nil || chenn!.count == 0 {
+                            self.isLoading = true
+                        } else {
+                            if self.chennels == nil {
+                                self.chennels = chenn
+                            } else {
+                                self.chennels! += chenn!
+                            }
+                            self.collectionView.reloadData()
+                            self.isLoading = false
+                        }
+                    } else {
+                        self.isLoading = true
+                    
+                    }
+                case let .failure(error):
+                UIAlertController.showAlert("网络错误：\(error.localizedDescription)", in: self)
+                        self.isLoading = true
+            }
+        }
+    }
+    
+    func loadRegions(){
+        Alamofire.request(RegionsJson.getSearchUrl())
+            .validate(statusCode: 200..<300)
+            .validate(contentType:  ["application/json"])
+            .responseJSON { response in
+                switch response.result {
+                case .success:
+                    if let json = response.result.value {
+                        let regions = RegionsConverter.getRegions(json: json)
+                        if regions == nil || regions!.count == 0 {
+                            self.isLoading = true
+                        } else {
+                            if self.regions == nil {
+                                self.regions = regions
+                            } else {
+                                self.regions! += regions!
+                            }
+                            self.collectionView.reloadData()
+                            self.isLoading = false
+                        }
+                    } else {
+                        self.isLoading = true
+                        
+                    }
+                case let .failure(error):
+                    UIAlertController.showAlert("网络错误：\(error.localizedDescription)", in: self)
+                    self.isLoading = true
+                }
+        }
+    }
+    
+    
     // MARK: UICollectionViewDelegate
 
     /*
@@ -128,5 +231,6 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
         img.contentMode = .scaleAspectFit
         return img
     }
+
 
 }

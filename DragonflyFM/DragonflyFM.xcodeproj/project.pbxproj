@@ -29,6 +29,10 @@
 		BA501F64237A8D6100881337 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA501F61237A8D6100881337 /* DataError.swift */; };
 		BA501F65237A8D6100881337 /* Repositry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA501F62237A8D6100881337 /* Repositry.swift */; };
 		BA501F66237A8D6100881337 /* DataViewModilDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA501F63237A8D6100881337 /* DataViewModilDelegate.swift */; };
+		BA6AF7B2237E27C500775290 /* ChennelsConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6AF7B1237E27C500775290 /* ChennelsConverter.swift */; };
+		BA6AF7BC237E343300775290 /* RegionsConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6AF7BB237E343300775290 /* RegionsConverter.swift */; };
+		BA6AF7BF237E35C800775290 /* ActionViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6AF7BD237E35C800775290 /* ActionViewDelegates.swift */; };
+		BA6AF7C0237E35C800775290 /* ActionTablePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6AF7BE237E35C800775290 /* ActionTablePicker.swift */; };
 		BAB84880237913F0009CFBC3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAB8487F237913F0009CFBC3 /* AppDelegate.swift */; };
 		BAB84885237913F0009CFBC3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAB84883237913F0009CFBC3 /* Main.storyboard */; };
 		BAB84888237913F0009CFBC3 /* DragonflyFM.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BAB84886237913F0009CFBC3 /* DragonflyFM.xcdatamodeld */; };
@@ -57,8 +61,6 @@
 		B38067F62176893F18B264AE /* Pods_DragonflyFMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DragonflyFMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA4E1A67237CD48C00DB51B7 /* Categories+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Categories+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BA4E1A68237CD48C00DB51B7 /* Categories+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Categories+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BA4E1A69237CD48C00DB51B7 /* Channels+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channels+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BA4E1A6A237CD48C00DB51B7 /* Channels+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channels+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA4E1A6B237CD48C00DB51B7 /* Region+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Region+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BA4E1A6C237CD48C00DB51B7 /* Region+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Region+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA4E1A6D237CD48C00DB51B7 /* Regions+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Regions+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -83,6 +85,12 @@
 		BA501F61237A8D6100881337 /* DataError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 		BA501F62237A8D6100881337 /* Repositry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repositry.swift; sourceTree = "<group>"; };
 		BA501F63237A8D6100881337 /* DataViewModilDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewModilDelegate.swift; sourceTree = "<group>"; };
+		BA6AF7B1237E27C500775290 /* ChennelsConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChennelsConverter.swift; sourceTree = "<group>"; };
+		BA6AF7B7237E303C00775290 /* Channels+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channels+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA6AF7B8237E303C00775290 /* Channels+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channels+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA6AF7BB237E343300775290 /* RegionsConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionsConverter.swift; sourceTree = "<group>"; };
+		BA6AF7BD237E35C800775290 /* ActionViewDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionViewDelegates.swift; sourceTree = "<group>"; };
+		BA6AF7BE237E35C800775290 /* ActionTablePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionTablePicker.swift; sourceTree = "<group>"; };
 		BAB8487C237913F0009CFBC3 /* DragonflyFM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DragonflyFM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAB8487F237913F0009CFBC3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BAB84884237913F0009CFBC3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -132,10 +140,10 @@
 		BAB84873237913F0009CFBC3 = {
 			isa = PBXGroup;
 			children = (
+				BA6AF7B7237E303C00775290 /* Channels+CoreDataClass.swift */,
+				BA6AF7B8237E303C00775290 /* Channels+CoreDataProperties.swift */,
 				BA4E1A67237CD48C00DB51B7 /* Categories+CoreDataClass.swift */,
 				BA4E1A68237CD48C00DB51B7 /* Categories+CoreDataProperties.swift */,
-				BA4E1A69237CD48C00DB51B7 /* Channels+CoreDataClass.swift */,
-				BA4E1A6A237CD48C00DB51B7 /* Channels+CoreDataProperties.swift */,
 				BA4E1A6B237CD48C00DB51B7 /* Region+CoreDataClass.swift */,
 				BA4E1A6C237CD48C00DB51B7 /* Region+CoreDataProperties.swift */,
 				BA4E1A6D237CD48C00DB51B7 /* Regions+CoreDataClass.swift */,
@@ -188,6 +196,8 @@
 		BAB848A223791608009CFBC3 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				BA6AF7BE237E35C800775290 /* ActionTablePicker.swift */,
+				BA6AF7BD237E35C800775290 /* ActionViewDelegates.swift */,
 				BA4E1A91237D036500DB51B7 /* EmptyViewDelegate.swift */,
 				BA4E1A93237D036500DB51B7 /* FuncTools.swift */,
 				BA4E1A92237D036500DB51B7 /* ScrollViewExtension.swift */,
@@ -237,6 +247,8 @@
 				BA4E1A81237CDC1000DB51B7 /* RegionsJson.swift */,
 				BA4E1A83237CDCED00DB51B7 /* CategoriesJson.swift */,
 				BA4E1A85237CDE5B00DB51B7 /* ChannelsJson.swift */,
+				BA6AF7B1237E27C500775290 /* ChennelsConverter.swift */,
+				BA6AF7BB237E343300775290 /* RegionsConverter.swift */,
 			);
 			path = Netwotk;
 			sourceTree = "<group>";
@@ -426,11 +438,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA6AF7BC237E343300775290 /* RegionsConverter.swift in Sources */,
 				BA4E1A7A237CD60A00DB51B7 /* VMChannels.swift in Sources */,
 				BA4E1A8A237CF5C300DB51B7 /* ChannelsCell.swift in Sources */,
 				BA4E1A7C237CD84300DB51B7 /* VMRegion.swift in Sources */,
 				BA4E1A78237CD4E800DB51B7 /* VMCategories.swift in Sources */,
 				BA4E1A86237CDE5B00DB51B7 /* ChannelsJson.swift in Sources */,
+				BA6AF7C0237E35C800775290 /* ActionTablePicker.swift in Sources */,
 				BA501F64237A8D6100881337 /* DataError.swift in Sources */,
 				BA4E1A7E237CD8B200DB51B7 /* VMRegions.swift in Sources */,
 				BA4E1A8F237D01F400DB51B7 /* AlertExtenslons.swift in Sources */,
@@ -438,7 +452,9 @@
 				BA4E1A84237CDCED00DB51B7 /* CategoriesJson.swift in Sources */,
 				BA501F65237A8D6100881337 /* Repositry.swift in Sources */,
 				BA4E1A8C237CFF3A00DB51B7 /* HeaderReusableView.swift in Sources */,
+				BA6AF7BF237E35C800775290 /* ActionViewDelegates.swift in Sources */,
 				BA501F66237A8D6100881337 /* DataViewModilDelegate.swift in Sources */,
+				BA6AF7B2237E27C500775290 /* ChennelsConverter.swift in Sources */,
 				BAB848AA23791667009CFBC3 /* JSONConverter.swift in Sources */,
 				BA4E1A90237D01F400DB51B7 /* DateExtensions.swift in Sources */,
 				BA4E1A96237D036500DB51B7 /* FuncTools.swift in Sources */,

@@ -29,6 +29,22 @@ class JSONConverter<T:JSONable> {
     static func getArray(json:Any, key: String) -> [T] {
         var items = [T]()
         let dic = json as! Dictionary<String,Any>
+        let obj = dic["Data"] as! Dictionary<String,Any>
+        let array = obj[key] as! Array<Any>
+        for i in array{
+            let t = T(json: i as! Dictionary<String, Any>)
+            items.append(t)
+        }
+        return items
+    }
+    
+    /// 解析格式为["key":[{},{}...],"key":"xxx"...]的json数据
+    /// - Parameter json: json数据
+    /// - Parameter key: 包含[{},{}...]的数据
+    /// - Returns: JSONable对象集合
+    static func getArrays(json:Any, key: String) -> [T] {
+        var items = [T]()
+        let dic = json as! Dictionary<String,Any>
         let array = dic[key] as! Array<Any>
         for i in array{
             let t = T(json: i as! Dictionary<String, Any>)
