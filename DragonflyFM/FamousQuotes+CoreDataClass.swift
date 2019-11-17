@@ -1,5 +1,5 @@
 //
-//  Channels+CoreDataClass.swift
+//  FamousQuotes+CoreDataClass.swift
 //  DragonflyFM
 //
 //  Created by 2017yd on 2019/11/17.
@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(Channels)
-public class Channels: NSManagedObject {
+@objc(FamousQuotes)
+public class FamousQuotes: NSManagedObject {
 
 }

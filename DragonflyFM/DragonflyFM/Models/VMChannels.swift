@@ -8,8 +8,11 @@
 
 import Foundation
 class VMChannels:JSONable {
+    let count:Int32?
+    let cou:Int?
     required init(json: Dictionary<String, Any>) {
-        audienceCount = json[json_channels_audienceCount] as? Int32
+   
+        audienceCount = String(describing: json[json_channels_audienceCount] as? Int32 )
         if json[json_channels_categories] is NSArray {
             let categorie = json[json_channels_categories] as! NSArray
             for a in categorie {
@@ -30,7 +33,7 @@ class VMChannels:JSONable {
         
     }
     
-    var audienceCount:Int32?
+    var audienceCount:String?
     var categories:String?
     var contentId: Int32?
     var cover: String?

@@ -29,6 +29,9 @@
 		BA501F64237A8D6100881337 /* DataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA501F61237A8D6100881337 /* DataError.swift */; };
 		BA501F65237A8D6100881337 /* Repositry.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA501F62237A8D6100881337 /* Repositry.swift */; };
 		BA501F66237A8D6100881337 /* DataViewModilDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA501F63237A8D6100881337 /* DataViewModilDelegate.swift */; };
+		BA57C6772380C68400E8B611 /* VMFamousQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA57C6762380C68400E8B611 /* VMFamousQuotes.swift */; };
+		BA57C6792380C78800E8B611 /* FamousQuotesJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA57C6782380C78800E8B611 /* FamousQuotesJson.swift */; };
+		BA57C67B2380CC1500E8B611 /* FamousQuotesConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA57C67A2380CC1500E8B611 /* FamousQuotesConverter.swift */; };
 		BA6AF7B2237E27C500775290 /* ChennelsConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6AF7B1237E27C500775290 /* ChennelsConverter.swift */; };
 		BA6AF7BC237E343300775290 /* RegionsConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6AF7BB237E343300775290 /* RegionsConverter.swift */; };
 		BA6AF7BF237E35C800775290 /* ActionViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6AF7BD237E35C800775290 /* ActionViewDelegates.swift */; };
@@ -85,9 +88,14 @@
 		BA501F61237A8D6100881337 /* DataError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 		BA501F62237A8D6100881337 /* Repositry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repositry.swift; sourceTree = "<group>"; };
 		BA501F63237A8D6100881337 /* DataViewModilDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewModilDelegate.swift; sourceTree = "<group>"; };
+		BA57C6722380C62C00E8B611 /* FamousQuotes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FamousQuotes+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA57C6732380C62C00E8B611 /* FamousQuotes+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FamousQuotes+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA57C6762380C68400E8B611 /* VMFamousQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMFamousQuotes.swift; sourceTree = "<group>"; };
+		BA57C6782380C78800E8B611 /* FamousQuotesJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamousQuotesJson.swift; sourceTree = "<group>"; };
+		BA57C67A2380CC1500E8B611 /* FamousQuotesConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamousQuotesConverter.swift; sourceTree = "<group>"; };
+		BA57C67C2380F66400E8B611 /* Channels+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channels+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA57C67D2380F66400E8B611 /* Channels+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channels+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA6AF7B1237E27C500775290 /* ChennelsConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChennelsConverter.swift; sourceTree = "<group>"; };
-		BA6AF7B7237E303C00775290 /* Channels+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channels+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BA6AF7B8237E303C00775290 /* Channels+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channels+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA6AF7BB237E343300775290 /* RegionsConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionsConverter.swift; sourceTree = "<group>"; };
 		BA6AF7BD237E35C800775290 /* ActionViewDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionViewDelegates.swift; sourceTree = "<group>"; };
 		BA6AF7BE237E35C800775290 /* ActionTablePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionTablePicker.swift; sourceTree = "<group>"; };
@@ -140,8 +148,10 @@
 		BAB84873237913F0009CFBC3 = {
 			isa = PBXGroup;
 			children = (
-				BA6AF7B7237E303C00775290 /* Channels+CoreDataClass.swift */,
-				BA6AF7B8237E303C00775290 /* Channels+CoreDataProperties.swift */,
+				BA57C67C2380F66400E8B611 /* Channels+CoreDataClass.swift */,
+				BA57C67D2380F66400E8B611 /* Channels+CoreDataProperties.swift */,
+				BA57C6722380C62C00E8B611 /* FamousQuotes+CoreDataClass.swift */,
+				BA57C6732380C62C00E8B611 /* FamousQuotes+CoreDataProperties.swift */,
 				BA4E1A67237CD48C00DB51B7 /* Categories+CoreDataClass.swift */,
 				BA4E1A68237CD48C00DB51B7 /* Categories+CoreDataProperties.swift */,
 				BA4E1A6B237CD48C00DB51B7 /* Region+CoreDataClass.swift */,
@@ -224,6 +234,7 @@
 				BA4E1A7B237CD84300DB51B7 /* VMRegion.swift */,
 				BA4E1A7D237CD8B200DB51B7 /* VMRegions.swift */,
 				BA4E1A97237D055B00DB51B7 /* ChannelsFactory.swift */,
+				BA57C6762380C68400E8B611 /* VMFamousQuotes.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -249,6 +260,8 @@
 				BA4E1A85237CDE5B00DB51B7 /* ChannelsJson.swift */,
 				BA6AF7B1237E27C500775290 /* ChennelsConverter.swift */,
 				BA6AF7BB237E343300775290 /* RegionsConverter.swift */,
+				BA57C6782380C78800E8B611 /* FamousQuotesJson.swift */,
+				BA57C67A2380CC1500E8B611 /* FamousQuotesConverter.swift */,
 			);
 			path = Netwotk;
 			sourceTree = "<group>";
@@ -447,11 +460,14 @@
 				BA6AF7C0237E35C800775290 /* ActionTablePicker.swift in Sources */,
 				BA501F64237A8D6100881337 /* DataError.swift in Sources */,
 				BA4E1A7E237CD8B200DB51B7 /* VMRegions.swift in Sources */,
+				BA57C6772380C68400E8B611 /* VMFamousQuotes.swift in Sources */,
+				BA57C67B2380CC1500E8B611 /* FamousQuotesConverter.swift in Sources */,
 				BA4E1A8F237D01F400DB51B7 /* AlertExtenslons.swift in Sources */,
 				BAB848AB23791667009CFBC3 /* JSONable.swift in Sources */,
 				BA4E1A84237CDCED00DB51B7 /* CategoriesJson.swift in Sources */,
 				BA501F65237A8D6100881337 /* Repositry.swift in Sources */,
 				BA4E1A8C237CFF3A00DB51B7 /* HeaderReusableView.swift in Sources */,
+				BA57C6792380C78800E8B611 /* FamousQuotesJson.swift in Sources */,
 				BA6AF7BF237E35C800775290 /* ActionViewDelegates.swift in Sources */,
 				BA501F66237A8D6100881337 /* DataViewModilDelegate.swift in Sources */,
 				BA6AF7B2237E27C500775290 /* ChennelsConverter.swift in Sources */,

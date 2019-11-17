@@ -64,6 +64,7 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
     func itemSelectde(index: Int) {
        let regio = regions![index]
         region = regio.title!
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -104,8 +105,9 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ChannelsCell
         let chennel = chennels![indexPath.item]
+        let count = "12" + chennel.audienceCount!
         cell.lblName.text = chennel.title
-        cell.lblCount.text = "\(chennel.audienceCount)"
+        cell.lblCount.text = count
         Alamofire.request(chennel.cover!).responseImage{ response in
             if let imag = response.result.value {
                 cell.imgCover.image = imag

@@ -2,7 +2,7 @@
 //  Channels+CoreDataProperties.swift
 //  DragonflyFM
 //
-//  Created by 2017yd on 2019/11/15.
+//  Created by 2017yd on 2019/11/17.
 //  Copyright © 2019年 2017yd. All rights reserved.
 //
 //
@@ -17,7 +17,7 @@ extension Channels {
         return NSFetchRequest<Channels>(entityName: "Channels")
     }
 
-    @NSManaged public var audienceCount: Int32
+    @NSManaged public var audienceCount: String?
     @NSManaged public var categories: String?
     @NSManaged public var contentId: Int32
     @NSManaged public var cover: String?
