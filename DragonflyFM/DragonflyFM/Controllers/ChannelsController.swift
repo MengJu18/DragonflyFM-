@@ -19,7 +19,8 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
     var currentPage = 1
     var isLoading = false
     var region = "广西"
-    
+    var button:UIButton?
+    let factory = ChannelsFactory.getInstance(UIApplication.shared.delegate as! AppDelegate)
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,6 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
         let hader = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "serachHeader", for: indexPath) as! HeaderReusableView
         hader.seaechBar.delegate = self
         hader.btnRegions.addTarget(self, action: #selector(btnRegios(_:)), for: .touchUpInside)
-        hader.btnRegions.setTitle(region, for: .normal)
         return hader
     }
     
@@ -57,14 +57,15 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
     }
     
     @objc func btnRegios(_ btn: UIButton) {
-         picker = ActionTablePicker(title: "选择地区", count: regions!.count, dataSource: self , delegate: self).show(superView: self.view)
+        picker = ActionTablePicker(title: "选择地区", count: regions!.count, dataSource: self , delegate: self).show(superView: self.view)
+        button = btn
     }
+    
     
     private var picker:ActionTablePicker?
     func itemSelectde(index: Int) {
        let regio = regions![index]
         region = regio.title!
-        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -83,7 +84,8 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        itemSelectde(index: indexPath.row)
+        itemSelectde(index: indexPath.row)
+        button!.setTitle(region, for: .normal)
         if picker != nil {
             picker?.cancel()
         }
@@ -105,17 +107,48 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ChannelsCell
         let chennel = chennels![indexPath.item]
-        let count = "12" + chennel.audienceCount!
         cell.lblName.text = chennel.title
-        cell.lblCount.text = count
+        cell.lblCount.text = chennel.audienceCount!
         Alamofire.request(chennel.cover!).responseImage{ response in
             if let imag = response.result.value {
                 cell.imgCover.image = imag
             }
         }
+        let tap = UITapGestureRecognizer(target: self, action: #selector(starTab(_:)))
+        cell.imgStar.isUserInteractionEnabled = true
+        cell.imgStar.addGestureRecognizer(tap)
+        cell.imgStar.tag = indexPath.item
+        var star = "star_off"
+        if (try! factory.isChannelsRxists(channels: chennel) ?? false) {
+            star = "star_on"
+        }
+        cell.imgStar.image = UIImage(named: star)
         return cell
     }
-
+    
+    @objc func starTab(_ tap:UITapGestureRecognizer) {
+        if let pos = tap.view?.tag{
+            let chennel = chennels![pos]
+             let exists = (try? factory.isChannelsRxists(channels: chennel)) ?? false
+            if exists {
+                let (success, error) = try! factory.removeChannels(channels: chennel)
+                if success {
+                    collectionView.reloadData()
+                }else {
+                    UIAlertController.showAlert(error!, in: self)
+                }
+            }else {
+                let (success,_) = factory.addChannels(channels: chennel)
+                if success {
+                    collectionView.reloadData()
+                }
+            }
+        }
+    }
+    
+    func setImag(_ img:UIImageView) {
+        
+    }
     
     func loadChennels(kw:Int32) {
         Alamofire.request(ChannelsJson.getSearchUrl(id: kw, page: currentPage))

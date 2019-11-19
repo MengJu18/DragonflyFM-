@@ -154,19 +154,6 @@ class Repositry<T:DataViewModilDelegate> where T:NSObject{
         }
     }
     
-    /// 更新指定数据
-    func update(vm:T) throws {
-        let fetch = NSFetchRequest<NSFetchRequestResult>(entityName: T.entityName)
-        fetch.predicate = NSPredicate(format: "id = %@", vm.id.uuidString)
-        do{
-            let  obj = try context.fetch(fetch)[0] as! NSManagedObject
-            for (key,value) in vm.entityPairs() {
-                obj.setValue(value, forKey: key)
-            }
-            app.saveContext()
-        } catch {
-            throw DataError.updateExistsError("更新图书失败！")
-        }
-    }
+  
     
 }

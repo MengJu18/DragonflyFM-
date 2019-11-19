@@ -85,6 +85,7 @@ class ActionTablePicker: UIView {
         self.addSubview(bgMask)
         addCancel()
         addTableView(count)
+
         addTitle(title: title, itemsCount: count)
     }
     
@@ -100,4 +101,5 @@ class ActionTablePicker: UIView {
         })
         return self
     }
+    
 }

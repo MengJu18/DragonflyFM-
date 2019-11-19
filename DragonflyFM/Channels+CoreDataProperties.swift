@@ -2,7 +2,7 @@
 //  Channels+CoreDataProperties.swift
 //  DragonflyFM
 //
-//  Created by 2017yd on 2019/11/17.
+//  Created by 2017yd on 2019/11/19.
 //  Copyright © 2019年 2017yd. All rights reserved.
 //
 //
@@ -25,5 +25,6 @@ extension Channels {
     @NSManaged public var nowplaying: String?
     @NSManaged public var title: String?
     @NSManaged public var updateTime: String?
+    @NSManaged public var id: UUID?
 
 }

@@ -10,6 +10,7 @@
         <attribute name="contentId" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES" syncable="YES"/>
         <attribute name="cover" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="descriptions" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO" syncable="YES"/>
         <attribute name="nowplaying" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="title" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="updateTime" optional="YES" attributeType="String" syncable="YES"/>
@@ -33,7 +34,7 @@
     </entity>
     <elements>
         <element name="Categories" positionX="-54" positionY="0" width="128" height="75"/>
-        <element name="Channels" positionX="-18" positionY="45" width="128" height="165"/>
+        <element name="Channels" positionX="-18" positionY="45" width="128" height="180"/>
         <element name="FamousQuotes" positionX="-27" positionY="72" width="128" height="75"/>
         <element name="Playbills" positionX="0" positionY="108" width="128" height="105"/>
         <element name="Region" positionX="-63" positionY="-18" width="128" height="60"/>

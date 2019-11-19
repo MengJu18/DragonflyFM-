@@ -5,13 +5,39 @@
 //  Created by 2017yd on 2019/11/14.
 //  Copyright © 2019年 2017yd. All rights reserved.
 //
-
+import CoreData
 import Foundation
-class VMChannels:JSONable {
-    let count:Int32?
-    let cou:Int?
+class VMChannels:NSObject, JSONable,DataViewModilDelegate {
+    func entityPairs() -> Dictionary<String, Any?> {
+        var dic:Dictionary<String,Any?> = Dictionary<String,Any?>()
+        dic[VMChannels.colId] = id
+        dic[VMChannels.colAudienceCount] = audienceCount
+        dic[VMChannels.colCategories] = categories
+        dic[VMChannels.colContentId] = contentId
+        dic[VMChannels.colCover] = cover
+        dic[VMChannels.colDescriptions] = descriptions
+         dic[VMChannels.colNowplaying] = nowplaying
+         dic[VMChannels.colTitle] = title
+         dic[VMChannels.colUpdateTime] = updateTime
+        return dic
+    }
+    
+    func packageSelf(result: NSFetchRequestResult) {
+        let channels = result as! Channels
+        audienceCount = channels.audienceCount
+        categories = channels.categories
+        contentId = channels.contentId
+        cover = channels.cover
+        descriptions = channels.descriptions
+        nowplaying = channels.nowplaying
+        title = channels.title
+        updateTime = channels.updateTime
+        id = channels.id!
+    }
+    
+    
     required init(json: Dictionary<String, Any>) {
-   
+        id = UUID()
         audienceCount = String(describing: json[json_channels_audienceCount] as? Int32 )
         if json[json_channels_categories] is NSArray {
             let categorie = json[json_channels_categories] as! NSArray
@@ -30,7 +56,6 @@ class VMChannels:JSONable {
             nowplaying = now["title"] as? String
            
         }
-        
     }
     
     var audienceCount:String?
@@ -41,6 +66,11 @@ class VMChannels:JSONable {
     var nowplaying: String?
     var title: String?
     var updateTime: String?
+    var id:UUID
+    
+    override init() {
+        id = UUID()
+    }
     
     static let entityName = "Channels"
     static let colAudienceCount = "audienceCount"
@@ -50,5 +80,6 @@ class VMChannels:JSONable {
     static let colDescriptions = "descriptions"
     static let colNowplaying = "nowplaying"
     static let colTitle = "title"
+    static let colId = "id"
     static let colUpdateTime = "updateTime"
 }
