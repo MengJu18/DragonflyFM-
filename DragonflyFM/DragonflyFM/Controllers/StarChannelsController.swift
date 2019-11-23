@@ -12,28 +12,39 @@ import AlamofireImage
 private let reuseIdentifier = "ChannelsCell"
 
 class StarChannelsController: UICollectionViewController,EmptyViewDelegate {
+    
     var channels:[VMChannels]?
+    let PlayListSegu = "PlayListSegu"
+    
      let factory = ChannelsFactory.getInstance(UIApplication.shared.delegate as! AppDelegate)
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(reload), name: NSNotification.Name(rawValue: navigations), object: nil)
         channels = try! factory.getAllChannels()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-
-        // Do any additional setup after loading the view.
+        collectionView.setEmtpyCollectionViewDelegate(target: self)
     }
 
-    /*
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: PlayListSegu, sender: indexPath.item)
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == PlayListSegu {
+            let destinatons = segue.destination as! PlayListController
+            if sender is Int {
+                let chennel = self.channels![sender as! Int]
+                destinatons.contentId = chennel.contentId
+                destinatons.cover = chennel.cover
+                destinatons.haderTitle = chennel.title
+                destinatons.returnText = "电台收藏"
+            }
+        }
     }
-    */
+    
 
     // MARK: UICollectionViewDataSource
 
@@ -76,7 +87,7 @@ class StarChannelsController: UICollectionViewController,EmptyViewDelegate {
     @objc func starTab(_ tap:UITapGestureRecognizer) {
         if let pos = tap.view?.tag{
             let chennel = channels![pos]
-            let exists = (try? factory.isChannelsRxists(channels: chennel)) ?? false
+            let exists = (try! factory.isChannelsRxists(channels: chennel)) ?? false
             if exists {
                 let (success, error) = try! factory.removeChannels(channels: chennel)
                 if success {
@@ -91,6 +102,10 @@ class StarChannelsController: UICollectionViewController,EmptyViewDelegate {
                 }
             }
         }
+    }
+    
+    @objc func reload(){
+        collectionView.reloadData()
     }
     // MARK: UICollectionViewDelegate
 

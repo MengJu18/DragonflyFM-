@@ -22,7 +22,7 @@ class JSONConverter<T:JSONable> {
         return items
     }
     
-    /// 解析格式为["key":[{},{}...],"key":"xxx"...]的json数据
+    /// 解析格式为{"key":[{},{}...],"key":"xxx"...}的json数据
     /// - Parameter json: json数据
     /// - Parameter key: 包含[{},{}...]的数据
     /// - Returns: JSONable对象集合
@@ -38,7 +38,43 @@ class JSONConverter<T:JSONable> {
         return items
     }
     
-    /// 解析格式为["key":[{},{}...],"key":"xxx"...]的json数据
+    /// 解析格式为{"key":[{},{}...],"key":"xxx"...}的json数据
+    /// - Parameter json: json数据
+    /// - Parameter key: 包含[{},{}...]的数据
+    /// - Returns: JSONable对象集合
+    static func getArrayKey(json:Any, key: String) -> [T] {
+        var items = [T]()
+        let dic = json as! Dictionary<String,Any>
+        let obj = dic["data"] as! Dictionary<String,Any>
+         let obj2 = obj["data"] as! Dictionary<String,Any>
+         let obj3 = obj2["doclist"] as! Dictionary<String,Any>
+        let array = obj[key] as! Array<Any>
+        for i in array{
+            let t = T(json: i as! Dictionary<String, Any>)
+            items.append(t)
+        }
+        return items
+    }
+    
+    
+    
+    /// 解析格式为{"key":[{},{}...],"key":"xxx"...}的json数据
+    /// - Parameter json: json数据
+    /// - Parameter key: 包含[{},{}...]的数据
+    /// - Returns: JSONable对象集合
+    static func getArraya(json:Any, key: String) -> [T] {
+        var items = [T]()
+        let dic = json as! Dictionary<String,Any>
+        let obj = dic["data"] as! Dictionary<String,Any>
+        let array = obj[key] as! Array<Any>
+        for i in array{
+            let t = T(json: i as! Dictionary<String, Any>)
+            items.append(t)
+        }
+        return items
+    }
+    
+    /// 解析格式为{"key":[{},{}...],"key":"xxx"...}的json数据
     /// - Parameter json: json数据
     /// - Parameter key: 包含[{},{}...]的数据
     /// - Returns: JSONable对象集合
@@ -53,6 +89,7 @@ class JSONConverter<T:JSONable> {
         return items
     }
     
+    
     /// 解析json字符串{}，整个字符串就是所需要的数据
     /// - Parameter json: json数据
     /// - Returns: JSONable对象集合
@@ -60,7 +97,8 @@ class JSONConverter<T:JSONable> {
         return T(json: json as! Dictionary<String, Any>)
     }
 
-    /// 解析格式为["key":{},"key1":"xxx"...]的json数据
+    
+    /// 解析格式为{"key":{},"key1":"xxx"...}的json数据
     /// - Parameter json: json数据
     /// - Parameter key: 包含转换的{}数据key
     /// - Returns: JSONable对象集合

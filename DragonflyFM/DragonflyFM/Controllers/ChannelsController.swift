@@ -21,29 +21,39 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
     var region = "广西"
     var button:UIButton?
     let factory = ChannelsFactory.getInstance(UIApplication.shared.delegate as! AppDelegate)
+    let PlaybillsSegu = "PlaybillsSegu"
 
     override func viewDidLoad() {
         super.viewDidLoad()
         loadChennels(kw: 239)
         loadRegions()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-
-
-        // Do any additional setup after loading the view.
+        NotificationCenter.default.addObserver(self, selector: #selector(reload), name: NSNotification.Name(rawValue: navigations), object: nil)
+        collectionView.setEmtpyCollectionViewDelegate(target: self)
     }
-
-    /*
+    @objc func reload(){
+        collectionView.reloadData()
+    }
+    
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        performSegue(withIdentifier: PlaybillsSegu, sender: indexPath.item)
+    }
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using [segue destinationViewController].
-        // Pass the selected object to the new view controller.
+        if segue.identifier == PlaybillsSegu {
+            let destinatons = segue.destination as! PlayListController
+            if sender is Int {
+                let chennel = self.chennels![sender as! Int]
+                destinatons.contentId = chennel.contentId
+                destinatons.cover = chennel.cover
+                destinatons.haderTitle = chennel.title
+                destinatons.returnText = region
+            }
+        }
     }
-    */
+ 
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let hader = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "serachHeader", for: indexPath) as! HeaderReusableView
@@ -53,7 +63,10 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
     }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        UIAlertController.showAlert("123", in: self)
+         if let k = searchBar.text {
+            chennels = nil
+            loadSearchChennels(kw: k)
+        }
     }
     
     @objc func btnRegios(_ btn: UIButton) {
@@ -146,9 +159,6 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
         }
     }
     
-    func setImag(_ img:UIImageView) {
-        
-    }
     
     func loadChennels(kw:Int32) {
         Alamofire.request(ChannelsJson.getSearchUrl(id: kw, page: currentPage))
@@ -212,7 +222,36 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
         }
     }
     
-    
+    func loadSearchChennels(kw:String) {
+        Alamofire.request(ChannelsJson.getStarSearchUrl(kw: kw))
+            .validate(statusCode: 200..<300)
+            .validate(contentType:  ["application/json"])
+            .responseJSON { response in
+                switch response.result {
+                case .success:
+                    if let json = response.result.value {
+                        let chenn = ChennelsConverter.getChennels(json: json)
+                        if chenn == nil || chenn!.count == 0 {
+                            self.isLoading = true
+                        } else {
+                            if self.chennels == nil {
+                                self.chennels = chenn
+                            } else {
+                                self.chennels! += chenn!
+                            }
+                            self.collectionView.reloadData()
+                            self.isLoading = false
+                        }
+                    } else {
+                        self.isLoading = true
+                        
+                    }
+                case let .failure(error):
+                    UIAlertController.showAlert("网络错误：\(error.localizedDescription)", in: self)
+                    self.isLoading = true
+                }
+        }
+    }
     // MARK: UICollectionViewDelegate
 
     /*

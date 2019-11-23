@@ -16,10 +16,32 @@ let json_channels_nowplaying = "nowplaying"
 let json_channels_title = "title"
 let json_channels_updateTime = "update_time"
 let json_channels_items = "items"
+let json_channels_id = "id"
+let json_channels_docs = "docs"
 
 class ChannelsJson {
     static func getSearchUrl(id:Int32,page:Int) -> String{
         let url = "https://rapi.qingting.fm/categories/\(id)/channels?with_total=true&page=\(page)&pagesize=21"
         return url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
     }
+    static func getStarSearchUrl(kw:String) -> String{
+        let urlStr = "https://i.qingting.fm/wapi/search?k=" + kw + "&groups=channel_live"
+        let url = urlStr.urlEncode()
+        return url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
+    }
+    
+    
 }
+extension NSString {
+
+    func urlEncode() -> String {
+        let encodeUrlString = self.addingPercentEncoding(withAllowedCharacters:
+            .urlQueryAllowed)
+        return encodeUrlString ?? ""
+    }
+    
+    func urlDecoded() -> String {
+        return self.removingPercentEncoding ?? ""
+    }
+}
+

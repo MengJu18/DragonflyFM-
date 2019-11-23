@@ -7,12 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1E063A0F23869FE8008BA896 /* PlayController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E063A0E23869FE8008BA896 /* PlayController.swift */; };
+		1E54B06623855D8400206C50 /* VMPlaybills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54B06523855D8400206C50 /* VMPlaybills.swift */; };
+		1E54B06823855EFC00206C50 /* PlaybillsJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54B06723855EFC00206C50 /* PlaybillsJson.swift */; };
+		1E54B06A23855F1100206C50 /* PlaybillsConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54B06923855F1100206C50 /* PlaybillsConverter.swift */; };
+		1E54B06C23856D4E00206C50 /* PlaybillsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54B06B23856D4E00206C50 /* PlaybillsController.swift */; };
+		1E54B06E23856D6A00206C50 /* PlaybillsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54B06D23856D6A00206C50 /* PlaybillsCell.swift */; };
+		1E818E942384384F000CA69E /* VMRegions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E818E932384384F000CA69E /* VMRegions.swift */; };
 		3C4271F2A03C9CAC317BF1BB /* Pods_DragonflyFMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38067F62176893F18B264AE /* Pods_DragonflyFMTests.framework */; };
 		4ED78D17AF93239F9FA22059 /* Pods_DragonflyFM.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C3905C43410E6AD23A0EA656 /* Pods_DragonflyFM.framework */; };
-		BA4E1A78237CD4E800DB51B7 /* VMCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E1A77237CD4E800DB51B7 /* VMCategories.swift */; };
 		BA4E1A7A237CD60A00DB51B7 /* VMChannels.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E1A79237CD60A00DB51B7 /* VMChannels.swift */; };
 		BA4E1A7C237CD84300DB51B7 /* VMRegion.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E1A7B237CD84300DB51B7 /* VMRegion.swift */; };
-		BA4E1A7E237CD8B200DB51B7 /* VMRegions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E1A7D237CD8B200DB51B7 /* VMRegions.swift */; };
 		BA4E1A80237CD99600DB51B7 /* RegionJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E1A7F237CD99600DB51B7 /* RegionJson.swift */; };
 		BA4E1A82237CDC1000DB51B7 /* RegionsJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E1A81237CDC1000DB51B7 /* RegionsJson.swift */; };
 		BA4E1A84237CDCED00DB51B7 /* CategoriesJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA4E1A83237CDCED00DB51B7 /* CategoriesJson.swift */; };
@@ -34,6 +39,8 @@
 		BA57C6772380C68400E8B611 /* VMFamousQuotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA57C6762380C68400E8B611 /* VMFamousQuotes.swift */; };
 		BA57C6792380C78800E8B611 /* FamousQuotesJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA57C6782380C78800E8B611 /* FamousQuotesJson.swift */; };
 		BA57C67B2380CC1500E8B611 /* FamousQuotesConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA57C67A2380CC1500E8B611 /* FamousQuotesConverter.swift */; };
+		BA5F9FB02388B80900A1771A /* PlayListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F9FAF2388B80900A1771A /* PlayListController.swift */; };
+		BA5F9FB22388C0D400A1771A /* PlayListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA5F9FB12388C0D400A1771A /* PlayListCell.swift */; };
 		BA6AF7B2237E27C500775290 /* ChennelsConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6AF7B1237E27C500775290 /* ChennelsConverter.swift */; };
 		BA6AF7BC237E343300775290 /* RegionsConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6AF7BB237E343300775290 /* RegionsConverter.swift */; };
 		BA6AF7BF237E35C800775290 /* ActionViewDelegates.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6AF7BD237E35C800775290 /* ActionViewDelegates.swift */; };
@@ -59,6 +66,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1E063A0E23869FE8008BA896 /* PlayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayController.swift; sourceTree = "<group>"; };
+		1E54B06123855D4E00206C50 /* Playbills+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Playbills+CoreDataClass.swift"; sourceTree = "<group>"; };
+		1E54B06223855D4E00206C50 /* Playbills+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Playbills+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1E54B06523855D8400206C50 /* VMPlaybills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMPlaybills.swift; sourceTree = "<group>"; };
+		1E54B06723855EFC00206C50 /* PlaybillsJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybillsJson.swift; sourceTree = "<group>"; };
+		1E54B06923855F1100206C50 /* PlaybillsConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybillsConverter.swift; sourceTree = "<group>"; };
+		1E54B06B23856D4E00206C50 /* PlaybillsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybillsController.swift; sourceTree = "<group>"; };
+		1E54B06D23856D6A00206C50 /* PlaybillsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybillsCell.swift; sourceTree = "<group>"; };
+		1E818E932384384F000CA69E /* VMRegions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMRegions.swift; sourceTree = "<group>"; };
 		22EADB6334AC8A9B6296961C /* Pods-DragonflyFM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonflyFM.release.xcconfig"; path = "Target Support Files/Pods-DragonflyFM/Pods-DragonflyFM.release.xcconfig"; sourceTree = "<group>"; };
 		3C5F6C4F548057EEB5AE4AC6 /* Pods-DragonflyFM.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonflyFM.debug.xcconfig"; path = "Target Support Files/Pods-DragonflyFM/Pods-DragonflyFM.debug.xcconfig"; sourceTree = "<group>"; };
 		9CADBA76C6CF0D35D55A169C /* Pods-DragonflyFMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonflyFMTests.debug.xcconfig"; path = "Target Support Files/Pods-DragonflyFMTests/Pods-DragonflyFMTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,10 +86,8 @@
 		BA4E1A6C237CD48C00DB51B7 /* Region+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Region+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA4E1A6D237CD48C00DB51B7 /* Regions+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Regions+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BA4E1A6E237CD48C00DB51B7 /* Regions+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Regions+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		BA4E1A77237CD4E800DB51B7 /* VMCategories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMCategories.swift; sourceTree = "<group>"; };
 		BA4E1A79237CD60A00DB51B7 /* VMChannels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMChannels.swift; sourceTree = "<group>"; };
 		BA4E1A7B237CD84300DB51B7 /* VMRegion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMRegion.swift; sourceTree = "<group>"; };
-		BA4E1A7D237CD8B200DB51B7 /* VMRegions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMRegions.swift; sourceTree = "<group>"; };
 		BA4E1A7F237CD99600DB51B7 /* RegionJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionJson.swift; sourceTree = "<group>"; };
 		BA4E1A81237CDC1000DB51B7 /* RegionsJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionsJson.swift; sourceTree = "<group>"; };
 		BA4E1A83237CDCED00DB51B7 /* CategoriesJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesJson.swift; sourceTree = "<group>"; };
@@ -99,6 +113,8 @@
 		BA57C6762380C68400E8B611 /* VMFamousQuotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMFamousQuotes.swift; sourceTree = "<group>"; };
 		BA57C6782380C78800E8B611 /* FamousQuotesJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamousQuotesJson.swift; sourceTree = "<group>"; };
 		BA57C67A2380CC1500E8B611 /* FamousQuotesConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FamousQuotesConverter.swift; sourceTree = "<group>"; };
+		BA5F9FAF2388B80900A1771A /* PlayListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListController.swift; sourceTree = "<group>"; };
+		BA5F9FB12388C0D400A1771A /* PlayListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayListCell.swift; sourceTree = "<group>"; };
 		BA6AF7B1237E27C500775290 /* ChennelsConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChennelsConverter.swift; sourceTree = "<group>"; };
 		BA6AF7BB237E343300775290 /* RegionsConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionsConverter.swift; sourceTree = "<group>"; };
 		BA6AF7BD237E35C800775290 /* ActionViewDelegates.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActionViewDelegates.swift; sourceTree = "<group>"; };
@@ -152,6 +168,8 @@
 		BAB84873237913F0009CFBC3 = {
 			isa = PBXGroup;
 			children = (
+				1E54B06123855D4E00206C50 /* Playbills+CoreDataClass.swift */,
+				1E54B06223855D4E00206C50 /* Playbills+CoreDataProperties.swift */,
 				BA55767B2383E510009A93F5 /* Channels+CoreDataClass.swift */,
 				BA55767C2383E510009A93F5 /* Channels+CoreDataProperties.swift */,
 				BA57C6722380C62C00E8B611 /* FamousQuotes+CoreDataClass.swift */,
@@ -218,6 +236,8 @@
 				BA4E1A89237CF5C300DB51B7 /* ChannelsCell.swift */,
 				BA4E1A8B237CFF3A00DB51B7 /* HeaderReusableView.swift */,
 				BA5576822383F240009A93F5 /* StarChannelsCell.swift */,
+				1E54B06D23856D6A00206C50 /* PlaybillsCell.swift */,
+				BA5F9FB12388C0D400A1771A /* PlayListCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -234,12 +254,12 @@
 		BAB848A423791632009CFBC3 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				BA4E1A77237CD4E800DB51B7 /* VMCategories.swift */,
 				BA4E1A79237CD60A00DB51B7 /* VMChannels.swift */,
 				BA4E1A7B237CD84300DB51B7 /* VMRegion.swift */,
-				BA4E1A7D237CD8B200DB51B7 /* VMRegions.swift */,
-				BA4E1A97237D055B00DB51B7 /* ChannelsFactory.swift */,
+				1E818E932384384F000CA69E /* VMRegions.swift */,
+				1E54B06523855D8400206C50 /* VMPlaybills.swift */,
 				BA57C6762380C68400E8B611 /* VMFamousQuotes.swift */,
+				BA4E1A97237D055B00DB51B7 /* ChannelsFactory.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -267,6 +287,8 @@
 				BA6AF7BB237E343300775290 /* RegionsConverter.swift */,
 				BA57C6782380C78800E8B611 /* FamousQuotesJson.swift */,
 				BA57C67A2380CC1500E8B611 /* FamousQuotesConverter.swift */,
+				1E54B06723855EFC00206C50 /* PlaybillsJson.swift */,
+				1E54B06923855F1100206C50 /* PlaybillsConverter.swift */,
 			);
 			path = Netwotk;
 			sourceTree = "<group>";
@@ -276,6 +298,9 @@
 			children = (
 				BA4E1A87237CF54100DB51B7 /* ChannelsController.swift */,
 				BA5576802383F1EC009A93F5 /* StarChannelsController.swift */,
+				1E54B06B23856D4E00206C50 /* PlaybillsController.swift */,
+				1E063A0E23869FE8008BA896 /* PlayController.swift */,
+				BA5F9FAF2388B80900A1771A /* PlayListController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -300,7 +325,7 @@
 				BAB84878237913F0009CFBC3 /* Sources */,
 				BAB84879237913F0009CFBC3 /* Frameworks */,
 				BAB8487A237913F0009CFBC3 /* Resources */,
-				ABD517D9CBD4C30468F322C1 /* [CP] Embed Pods Frameworks */,
+				32CF5757A3BF6BBBD43D4E55 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -389,6 +414,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		32CF5757A3BF6BBBD43D4E55 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DragonflyFM/Pods-DragonflyFM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DragonflyFM/Pods-DragonflyFM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DragonflyFM/Pods-DragonflyFM-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		591FE25EFA0D98C967D74975 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -409,23 +451,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		ABD517D9CBD4C30468F322C1 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DragonflyFM/Pods-DragonflyFM-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-DragonflyFM/Pods-DragonflyFM-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DragonflyFM/Pods-DragonflyFM-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D43F0A7A630B151B50ADD6F6 /* [CP] Check Pods Manifest.lock */ = {
@@ -459,14 +484,17 @@
 			files = (
 				BA55767F2383E646009A93F5 /* DataError.swift in Sources */,
 				BA5576812383F1EC009A93F5 /* StarChannelsController.swift in Sources */,
+				1E54B06E23856D6A00206C50 /* PlaybillsCell.swift in Sources */,
+				1E54B06823855EFC00206C50 /* PlaybillsJson.swift in Sources */,
 				BA6AF7BC237E343300775290 /* RegionsConverter.swift in Sources */,
+				1E54B06C23856D4E00206C50 /* PlaybillsController.swift in Sources */,
 				BA4E1A7A237CD60A00DB51B7 /* VMChannels.swift in Sources */,
+				1E818E942384384F000CA69E /* VMRegions.swift in Sources */,
 				BA4E1A8A237CF5C300DB51B7 /* ChannelsCell.swift in Sources */,
 				BA4E1A7C237CD84300DB51B7 /* VMRegion.swift in Sources */,
-				BA4E1A78237CD4E800DB51B7 /* VMCategories.swift in Sources */,
+				BA5F9FB02388B80900A1771A /* PlayListController.swift in Sources */,
 				BA4E1A86237CDE5B00DB51B7 /* ChannelsJson.swift in Sources */,
 				BA6AF7C0237E35C800775290 /* ActionTablePicker.swift in Sources */,
-				BA4E1A7E237CD8B200DB51B7 /* VMRegions.swift in Sources */,
 				BA57C6772380C68400E8B611 /* VMFamousQuotes.swift in Sources */,
 				BA57C67B2380CC1500E8B611 /* FamousQuotesConverter.swift in Sources */,
 				BA4E1A8F237D01F400DB51B7 /* AlertExtenslons.swift in Sources */,
@@ -474,11 +502,14 @@
 				BA4E1A84237CDCED00DB51B7 /* CategoriesJson.swift in Sources */,
 				BA501F65237A8D6100881337 /* Repositry.swift in Sources */,
 				BA4E1A8C237CFF3A00DB51B7 /* HeaderReusableView.swift in Sources */,
+				1E063A0F23869FE8008BA896 /* PlayController.swift in Sources */,
 				BA57C6792380C78800E8B611 /* FamousQuotesJson.swift in Sources */,
 				BA6AF7BF237E35C800775290 /* ActionViewDelegates.swift in Sources */,
+				1E54B06623855D8400206C50 /* VMPlaybills.swift in Sources */,
 				BA501F66237A8D6100881337 /* DataViewModilDelegate.swift in Sources */,
 				BA5576832383F240009A93F5 /* StarChannelsCell.swift in Sources */,
 				BA6AF7B2237E27C500775290 /* ChennelsConverter.swift in Sources */,
+				1E54B06A23855F1100206C50 /* PlaybillsConverter.swift in Sources */,
 				BAB848AA23791667009CFBC3 /* JSONConverter.swift in Sources */,
 				BA4E1A90237D01F400DB51B7 /* DateExtensions.swift in Sources */,
 				BA4E1A96237D036500DB51B7 /* FuncTools.swift in Sources */,
@@ -490,6 +521,7 @@
 				BA4E1A82237CDC1000DB51B7 /* RegionsJson.swift in Sources */,
 				BA4E1A80237CD99600DB51B7 /* RegionJson.swift in Sources */,
 				BAB84880237913F0009CFBC3 /* AppDelegate.swift in Sources */,
+				BA5F9FB22388C0D400A1771A /* PlayListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
