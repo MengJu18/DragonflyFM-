@@ -18,6 +18,8 @@ let json_channels_updateTime = "update_time"
 let json_channels_items = "items"
 let json_channels_id = "id"
 let json_channels_docs = "docs"
+let json_channels_startTime = "start_time"
+let json_nowplaying_title = "title"
 
 class ChannelsJson {
     static func getSearchUrl(id:Int32,page:Int) -> String{

@@ -14,20 +14,22 @@ class PlayListController: UIViewController,UITableViewDelegate,UITableViewDataSo
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var btnReturn: UIButton!
     @IBOutlet weak var lblTitle: UILabel!
+
     
-    var contentId:Int32?
-    var cover:String?
+    var chennel:VMChannels?
     var haderTitle:String?
     var returnText:String?
     var playbills:[VMPlaybills]?
     let playbillsCell = "playbillsCell"
     let PlaySegu = "PlaySegu"
-    
+    var pos = 100
+    var index = 100
     override func viewDidLoad() {
         super.viewDidLoad()
-        loadBooks(kw: contentId!)
+        loadBooks(kw: chennel!.contentId!)
         btnReturn.setTitle(returnText, for: .normal)
         lblTitle.text = haderTitle
+        
         // Do any additional setup after loading the view.
     }
     
@@ -49,8 +51,23 @@ class PlayListController: UIViewController,UITableViewDelegate,UITableViewDataSo
         } else {
             cell.lblUserName.text = playbill.username
         }
-        cell.lblCount.text = "\(playbill.duration)"
+        cell.lblCount.text = "0"
         cell.lblTime.text = "[" + playbill.starItme! + "-" + playbill.endTime! + "]"
+        if playbill.title == chennel?.nowplaying && playbill.starItme == chennel?.startTime{
+            cell.imgCover.image = UIImage(named: "yi_bu_fang")
+            cell.lblTitle.textColor = UIColor.blue
+            pos = indexPath.item
+        } else if indexPath.item > pos{
+            cell.imgCover.image = UIImage(named: "shi_jian")
+            cell.lblTitle.textColor = UIColor.black
+        }else if playbill.title != chennel?.nowplaying && playbill.starItme != chennel?.startTime{
+            cell.imgCover.image = UIImage(named: "zheng_zai_bo_fang")
+            cell.lblTitle.textColor = UIColor.black
+        }
+        if indexPath.item == index {
+            cell.imgCover.image = UIImage(named: "yin_liang")
+            cell.lblTitle.textColor = UIColor.red
+        }
         return cell
     }
     
@@ -79,6 +96,8 @@ class PlayListController: UIViewController,UITableViewDelegate,UITableViewDataSo
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        index = indexPath.item
+        tableView.reloadData()
         performSegue(withIdentifier: PlaySegu, sender: indexPath.item)
     }
     
@@ -89,9 +108,11 @@ class PlayListController: UIViewController,UITableViewDelegate,UITableViewDataSo
         if segue.identifier == PlaySegu {
             let destinations = segue.destination as! PlayController
             if sender is Int {
-                destinations.cover = cover
+                destinations.cover = chennel!.cover
                 destinations.play = playbills![sender as! Int]
                 destinations.haderTitle = haderTitle
+                destinations.plays = playbills
+                destinations.pos = (sender as! Int)
             }
         }
     }

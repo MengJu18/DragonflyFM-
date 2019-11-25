@@ -50,4 +50,17 @@ extension Date{
         let date = formatter.date(from: strDate)
         return date!
     }
+    
+    /// 判断传入的时间是周几
+    /// 返回周一到周日为1 - 7
+    static func getWeekDay(dateTime:String)->Int{
+        let dateFmt = DateFormatter()
+        dateFmt.dateFormat = "yyyy-MM-dd HH:mm:ss"
+        let date = dateFmt.date(from: dateTime)
+        date?.description
+        let interval = Int(date!.timeIntervalSince1970) + NSTimeZone.local.secondsFromGMT()
+        let days = Int(interval/86400) // 24*60*60
+        let weekday = ((days + 4)%7+7)%7
+        return weekday == 0 ? 7 : weekday
+    }
 }

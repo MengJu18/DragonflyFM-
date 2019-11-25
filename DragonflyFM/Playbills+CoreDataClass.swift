@@ -1,5 +1,5 @@
 //
-//  Channels+CoreDataClass.swift
+//  Playbills+CoreDataClass.swift
 //  DragonflyFM
 //
 //  Created by 2017yd on 2019/11/25.
@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(Channels)
-public class Channels: NSManagedObject {
+@objc(Playbills)
+public class Playbills: NSManagedObject {
 
 }

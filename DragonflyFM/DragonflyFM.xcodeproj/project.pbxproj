@@ -11,7 +11,6 @@
 		1E54B06623855D8400206C50 /* VMPlaybills.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54B06523855D8400206C50 /* VMPlaybills.swift */; };
 		1E54B06823855EFC00206C50 /* PlaybillsJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54B06723855EFC00206C50 /* PlaybillsJson.swift */; };
 		1E54B06A23855F1100206C50 /* PlaybillsConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54B06923855F1100206C50 /* PlaybillsConverter.swift */; };
-		1E54B06C23856D4E00206C50 /* PlaybillsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54B06B23856D4E00206C50 /* PlaybillsController.swift */; };
 		1E54B06E23856D6A00206C50 /* PlaybillsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E54B06D23856D6A00206C50 /* PlaybillsCell.swift */; };
 		1E818E942384384F000CA69E /* VMRegions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E818E932384384F000CA69E /* VMRegions.swift */; };
 		3C4271F2A03C9CAC317BF1BB /* Pods_DragonflyFMTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B38067F62176893F18B264AE /* Pods_DragonflyFMTests.framework */; };
@@ -67,12 +66,9 @@
 
 /* Begin PBXFileReference section */
 		1E063A0E23869FE8008BA896 /* PlayController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayController.swift; sourceTree = "<group>"; };
-		1E54B06123855D4E00206C50 /* Playbills+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Playbills+CoreDataClass.swift"; sourceTree = "<group>"; };
-		1E54B06223855D4E00206C50 /* Playbills+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Playbills+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1E54B06523855D8400206C50 /* VMPlaybills.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMPlaybills.swift; sourceTree = "<group>"; };
 		1E54B06723855EFC00206C50 /* PlaybillsJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybillsJson.swift; sourceTree = "<group>"; };
 		1E54B06923855F1100206C50 /* PlaybillsConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybillsConverter.swift; sourceTree = "<group>"; };
-		1E54B06B23856D4E00206C50 /* PlaybillsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybillsController.swift; sourceTree = "<group>"; };
 		1E54B06D23856D6A00206C50 /* PlaybillsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybillsCell.swift; sourceTree = "<group>"; };
 		1E818E932384384F000CA69E /* VMRegions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMRegions.swift; sourceTree = "<group>"; };
 		22EADB6334AC8A9B6296961C /* Pods-DragonflyFM.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonflyFM.release.xcconfig"; path = "Target Support Files/Pods-DragonflyFM/Pods-DragonflyFM.release.xcconfig"; sourceTree = "<group>"; };
@@ -80,6 +76,10 @@
 		9CADBA76C6CF0D35D55A169C /* Pods-DragonflyFMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonflyFMTests.debug.xcconfig"; path = "Target Support Files/Pods-DragonflyFMTests/Pods-DragonflyFMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B365B24153926C657C8432FD /* Pods-DragonflyFMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DragonflyFMTests.release.xcconfig"; path = "Target Support Files/Pods-DragonflyFMTests/Pods-DragonflyFMTests.release.xcconfig"; sourceTree = "<group>"; };
 		B38067F62176893F18B264AE /* Pods_DragonflyFMTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DragonflyFMTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA3D79E0238B73D100BBA5F7 /* Channels+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channels+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA3D79E1238B73D100BBA5F7 /* Channels+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channels+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BA3D79E4238B85D100BBA5F7 /* Playbills+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Playbills+CoreDataClass.swift"; sourceTree = "<group>"; };
+		BA3D79E5238B85D100BBA5F7 /* Playbills+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Playbills+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA4E1A67237CD48C00DB51B7 /* Categories+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Categories+CoreDataClass.swift"; sourceTree = "<group>"; };
 		BA4E1A68237CD48C00DB51B7 /* Categories+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Categories+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA4E1A6B237CD48C00DB51B7 /* Region+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Region+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -104,8 +104,6 @@
 		BA501F61237A8D6100881337 /* DataError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataError.swift; sourceTree = "<group>"; };
 		BA501F62237A8D6100881337 /* Repositry.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Repositry.swift; sourceTree = "<group>"; };
 		BA501F63237A8D6100881337 /* DataViewModilDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataViewModilDelegate.swift; sourceTree = "<group>"; };
-		BA55767B2383E510009A93F5 /* Channels+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channels+CoreDataClass.swift"; sourceTree = "<group>"; };
-		BA55767C2383E510009A93F5 /* Channels+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Channels+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		BA5576802383F1EC009A93F5 /* StarChannelsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarChannelsController.swift; sourceTree = "<group>"; };
 		BA5576822383F240009A93F5 /* StarChannelsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarChannelsCell.swift; sourceTree = "<group>"; };
 		BA57C6722380C62C00E8B611 /* FamousQuotes+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FamousQuotes+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -168,10 +166,10 @@
 		BAB84873237913F0009CFBC3 = {
 			isa = PBXGroup;
 			children = (
-				1E54B06123855D4E00206C50 /* Playbills+CoreDataClass.swift */,
-				1E54B06223855D4E00206C50 /* Playbills+CoreDataProperties.swift */,
-				BA55767B2383E510009A93F5 /* Channels+CoreDataClass.swift */,
-				BA55767C2383E510009A93F5 /* Channels+CoreDataProperties.swift */,
+				BA3D79E4238B85D100BBA5F7 /* Playbills+CoreDataClass.swift */,
+				BA3D79E5238B85D100BBA5F7 /* Playbills+CoreDataProperties.swift */,
+				BA3D79E0238B73D100BBA5F7 /* Channels+CoreDataClass.swift */,
+				BA3D79E1238B73D100BBA5F7 /* Channels+CoreDataProperties.swift */,
 				BA57C6722380C62C00E8B611 /* FamousQuotes+CoreDataClass.swift */,
 				BA57C6732380C62C00E8B611 /* FamousQuotes+CoreDataProperties.swift */,
 				BA4E1A67237CD48C00DB51B7 /* Categories+CoreDataClass.swift */,
@@ -298,7 +296,6 @@
 			children = (
 				BA4E1A87237CF54100DB51B7 /* ChannelsController.swift */,
 				BA5576802383F1EC009A93F5 /* StarChannelsController.swift */,
-				1E54B06B23856D4E00206C50 /* PlaybillsController.swift */,
 				1E063A0E23869FE8008BA896 /* PlayController.swift */,
 				BA5F9FAF2388B80900A1771A /* PlayListController.swift */,
 			);
@@ -487,7 +484,6 @@
 				1E54B06E23856D6A00206C50 /* PlaybillsCell.swift in Sources */,
 				1E54B06823855EFC00206C50 /* PlaybillsJson.swift in Sources */,
 				BA6AF7BC237E343300775290 /* RegionsConverter.swift in Sources */,
-				1E54B06C23856D4E00206C50 /* PlaybillsController.swift in Sources */,
 				BA4E1A7A237CD60A00DB51B7 /* VMChannels.swift in Sources */,
 				1E818E942384384F000CA69E /* VMRegions.swift in Sources */,
 				BA4E1A8A237CF5C300DB51B7 /* ChannelsCell.swift in Sources */,

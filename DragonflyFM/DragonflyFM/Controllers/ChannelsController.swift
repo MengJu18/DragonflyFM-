@@ -10,7 +10,7 @@ import UIKit
 import Alamofire
 import AlamofireImage
 private let reuseIdentifier = "Cell"
-
+import CoreData
 class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyViewDelegate,UITableViewDelegate,UITableViewDataSource{
    
     
@@ -29,6 +29,8 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
         loadRegions()
         NotificationCenter.default.addObserver(self, selector: #selector(reload), name: NSNotification.Name(rawValue: navigations), object: nil)
         collectionView.setEmtpyCollectionViewDelegate(target: self)
+      
+       
     }
     @objc func reload(){
         collectionView.reloadData()
@@ -46,14 +48,15 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
             let destinatons = segue.destination as! PlayListController
             if sender is Int {
                 let chennel = self.chennels![sender as! Int]
-                destinatons.contentId = chennel.contentId
-                destinatons.cover = chennel.cover
                 destinatons.haderTitle = chennel.title
                 destinatons.returnText = region
+                destinatons.chennel = chennel
             }
         }
     }
  
+
+    
     
     override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         let hader = collectionView.dequeueReusableSupplementaryView(ofKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: "serachHeader", for: indexPath) as! HeaderReusableView
@@ -79,6 +82,8 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
     func itemSelectde(index: Int) {
        let regio = regions![index]
         region = regio.title!
+        chennels = nil
+        loadSearchChennels(kw: regio.title!)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -122,11 +127,16 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
         let chennel = chennels![indexPath.item]
         cell.lblName.text = chennel.title
         cell.lblCount.text = chennel.audienceCount!
-        Alamofire.request(chennel.cover!).responseImage{ response in
-            if let imag = response.result.value {
-                cell.imgCover.image = imag
+        if chennel.cover != nil {
+            Alamofire.request(chennel.cover!).responseImage{ response in
+                if let imag = response.result.value {
+                    cell.imgCover.image = imag
+                }
             }
+        } else {
+            cell.imgCover.image = UIImage(named: "no")
         }
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(starTab(_:)))
         cell.imgStar.isUserInteractionEnabled = true
         cell.imgStar.addGestureRecognizer(tap)
@@ -145,15 +155,13 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
              let exists = (try? factory.isChannelsRxists(channels: chennel)) ?? false
             if exists {
                 let (success, error) = try! factory.removeChannels(channels: chennel)
-                if success {
-                    collectionView.reloadData()
-                }else {
-                    UIAlertController.showAlert(error!, in: self)
+                if !success {
+                     UIAlertController.showAlert(error!, in: self)
                 }
             }else {
                 let (success,_) = factory.addChannels(channels: chennel)
                 if success {
-                    collectionView.reloadData()
+//                    collectionView.reloadData()
                 }
             }
         }
@@ -230,7 +238,7 @@ class ChannelsController: UICollectionViewController,UISearchBarDelegate, EmptyV
                 switch response.result {
                 case .success:
                     if let json = response.result.value {
-                        let chenn = ChennelsConverter.getChennels(json: json)
+                        let chenn = ChennelsConverter.getChennel(json: json)
                         if chenn == nil || chenn!.count == 0 {
                             self.isLoading = true
                         } else {

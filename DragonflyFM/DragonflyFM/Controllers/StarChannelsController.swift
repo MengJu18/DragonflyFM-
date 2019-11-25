@@ -37,10 +37,10 @@ class StarChannelsController: UICollectionViewController,EmptyViewDelegate {
             let destinatons = segue.destination as! PlayListController
             if sender is Int {
                 let chennel = self.channels![sender as! Int]
-                destinatons.contentId = chennel.contentId
-                destinatons.cover = chennel.cover
+
                 destinatons.haderTitle = chennel.title
                 destinatons.returnText = "电台收藏"
+                destinatons.chennel = chennel
             }
         }
     }
@@ -64,11 +64,16 @@ class StarChannelsController: UICollectionViewController,EmptyViewDelegate {
         let chennel = channels![indexPath.item]
         cell.lblName.text = chennel.title
         cell.lblCount.text = chennel.audienceCount!
-        Alamofire.request(chennel.cover!).responseImage{ response in
-            if let imag = response.result.value {
-                cell.imgCover.image = imag
+        if chennel.cover != nil {
+            Alamofire.request(chennel.cover!).responseImage{ response in
+                if let imag = response.result.value {
+                    cell.imgCover.image = imag
+                }
             }
+        } else {
+            cell.imgCover.image = UIImage(named: "no")
         }
+       
         let tap = UITapGestureRecognizer(target: self, action: #selector(starTab(_:)))
         cell.imgStar.isUserInteractionEnabled = true
         cell.imgStar.addGestureRecognizer(tap)
@@ -91,20 +96,20 @@ class StarChannelsController: UICollectionViewController,EmptyViewDelegate {
             if exists {
                 let (success, error) = try! factory.removeChannels(channels: chennel)
                 if success {
+                    channels = nil
+                    channels = try! factory.getAllChannels()
+//                    channels!.remove(at: pos)
                     collectionView.reloadData()
                 }else {
                     UIAlertController.showAlert(error!, in: self)
-                }
-            }else {
-                let (success,_) = factory.addChannels(channels: chennel)
-                if success {
-                    collectionView.reloadData()
                 }
             }
         }
     }
     
     @objc func reload(){
+        channels = nil
+        channels = try! factory.getAllChannels()
         collectionView.reloadData()
     }
     // MARK: UICollectionViewDelegate

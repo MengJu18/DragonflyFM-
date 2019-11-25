@@ -39,7 +39,7 @@ class VMChannels:NSObject, JSONable,DataViewModilDelegate {
     required init(json: Dictionary<String, Any>) {
         id = UUID()
         audienceCount = String(describing: json[json_channels_audienceCount] as? Int32 )
-        if audienceCount == nil {
+        if audienceCount == "nil" {
             audienceCount = json[json_channels_audienceCount] as? String
         }
         if json[json_channels_categories] is NSArray {
@@ -59,8 +59,8 @@ class VMChannels:NSObject, JSONable,DataViewModilDelegate {
         updateTime = json[json_channels_updateTime] as? String
         if json[json_channels_nowplaying] is NSObject {
             let now = json[json_channels_nowplaying] as! Dictionary<String,Any>
-            nowplaying = now["title"] as? String
-           
+            nowplaying = now[json_nowplaying_title] as? String
+            startTime = now[json_channels_startTime] as? String
         }
     }
     
@@ -72,6 +72,7 @@ class VMChannels:NSObject, JSONable,DataViewModilDelegate {
     var nowplaying: String?
     var title: String?
     var updateTime: String?
+    var startTime:String?
     var id:UUID
     
     override init() {
@@ -88,4 +89,5 @@ class VMChannels:NSObject, JSONable,DataViewModilDelegate {
     static let colTitle = "title"
     static let colId = "id"
     static let colUpdateTime = "updateTime"
+    static let colStartTime = "startTime"
 }

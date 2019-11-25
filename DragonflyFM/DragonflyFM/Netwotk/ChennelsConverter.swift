@@ -16,4 +16,12 @@ class ChennelsConverter {
         }
         return chennels
     }
+    static func getChennel(json:Any) -> [VMChannels]? {
+        var chennels:[VMChannels]?
+        let dic = json as! Dictionary<String,Any>
+        if dic.count > 0 {
+            chennels = JSONConverter<VMChannels>.getArrayKey(json: json, key: json_channels_docs)
+        }
+        return chennels
+    }
 }

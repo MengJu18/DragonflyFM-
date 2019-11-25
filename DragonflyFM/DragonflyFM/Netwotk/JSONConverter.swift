@@ -46,13 +46,17 @@ class JSONConverter<T:JSONable> {
         var items = [T]()
         let dic = json as! Dictionary<String,Any>
         let obj = dic["data"] as! Dictionary<String,Any>
-         let obj2 = obj["data"] as! Dictionary<String,Any>
-         let obj3 = obj2["doclist"] as! Dictionary<String,Any>
-        let array = obj[key] as! Array<Any>
-        for i in array{
-            let t = T(json: i as! Dictionary<String, Any>)
-            items.append(t)
+         let obj2 = obj["data"] as! Array<Any>
+        for a in obj2 {
+            let c = a as! Dictionary<String,Any>
+            let obj3 = c["doclist"] as! Dictionary<String,Any>
+            let array = obj3[key] as! Array<Any>
+            for i in array{
+                let t = T(json: i as! Dictionary<String, Any>)
+                items.append(t)
+            }
         }
+       
         return items
     }
     
