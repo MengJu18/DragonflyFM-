@@ -21,7 +21,7 @@ class PlayListController: UIViewController,UITableViewDelegate,UITableViewDataSo
     var returnText:String?
     var playbills:[VMPlaybills]?
     let playbillsCell = "playbillsCell"
-    let PlaySegu = "PlaySegu"
+    let musicSegu = "musicSegu"
     var pos = 100
     var index = 100
     override func viewDidLoad() {
@@ -54,18 +54,18 @@ class PlayListController: UIViewController,UITableViewDelegate,UITableViewDataSo
         cell.lblCount.text = "0"
         cell.lblTime.text = "[" + playbill.starItme! + "-" + playbill.endTime! + "]"
         if playbill.title == chennel?.nowplaying && playbill.starItme == chennel?.startTime{
-            cell.imgCover.image = UIImage(named: "yi_bu_fang")
+            cell.imgCover.image = UIImage(named: "play")
             cell.lblTitle.textColor = UIColor.blue
             pos = indexPath.item
         } else if indexPath.item > pos{
-            cell.imgCover.image = UIImage(named: "shi_jian")
+            cell.imgCover.image = UIImage(named: "time")
             cell.lblTitle.textColor = UIColor.black
         }else if playbill.title != chennel?.nowplaying && playbill.starItme != chennel?.startTime{
-            cell.imgCover.image = UIImage(named: "zheng_zai_bo_fang")
+            cell.imgCover.image = UIImage(named: "big")
             cell.lblTitle.textColor = UIColor.black
         }
         if indexPath.item == index {
-            cell.imgCover.image = UIImage(named: "yin_liang")
+            cell.imgCover.image = UIImage(named: "listen")
             cell.lblTitle.textColor = UIColor.red
         }
         return cell
@@ -98,14 +98,14 @@ class PlayListController: UIViewController,UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         index = indexPath.item
         tableView.reloadData()
-        performSegue(withIdentifier: PlaySegu, sender: indexPath.item)
+        performSegue(withIdentifier: musicSegu, sender: indexPath.item)
     }
     
     // MARK: - Navigation
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == PlaySegu {
+        if segue.identifier == musicSegu {
             let destinations = segue.destination as! PlayController
             if sender is Int {
                 destinations.cover = chennel!.cover

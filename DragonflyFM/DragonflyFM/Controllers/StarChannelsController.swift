@@ -14,7 +14,7 @@ private let reuseIdentifier = "ChannelsCell"
 class StarChannelsController: UICollectionViewController,EmptyViewDelegate {
     
     var channels:[VMChannels]?
-    let PlayListSegu = "PlayListSegu"
+    let musicListSegu = "musicListSegu"
     
      let factory = ChannelsFactory.getInstance(UIApplication.shared.delegate as! AppDelegate)
     override func viewDidLoad() {
@@ -26,14 +26,14 @@ class StarChannelsController: UICollectionViewController,EmptyViewDelegate {
     }
 
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        performSegue(withIdentifier: PlayListSegu, sender: indexPath.item)
+        performSegue(withIdentifier: musicListSegu, sender: indexPath.item)
     }
     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == PlayListSegu {
+        if segue.identifier == musicListSegu {
             let destinatons = segue.destination as! PlayListController
             if sender is Int {
                 let chennel = self.channels![sender as! Int]
